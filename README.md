@@ -23,17 +23,13 @@ Install through the excellent add-on manager <a href="https://minion.mmoui.com/"
 <br/>
 
 
-### 5/29/21 Blackwood and Dragonhold (Southern Elsweyr) Guides Coming 6/1 (Thank you, snichols7778)! 
-<img src="https://i.imgur.com/sXFD12e.png">
-<i>artwork &copy; ZeniMax Media</i>
-
-### 3/27/21 Skyrim Guides Now Available (Thanks to snichols7778)! 
-
-<img src="https://i.imgur.com/bsUJyDD.png">
+### 6/1/21 Blackwood, Dragonhold (Southern Elsweyr), and Craglorn guides now available (Thank you, snichols7778)! 
+<img src="https://i.imgur.com/gtJYaJ4.png">
 <i>artwork &copy; ZeniMax Media</i>
 
 ### Recent Updates
 
+* 3/27/21 Skyrim Guides Now Available (Thanks to snichols7778)!
 * 3/13/21 merge: Sharlikran: Misc changes and updates
 * 3/13/21 merge: Sharlikran: Removed embedded libraries. Fixed /zgpos output
 * 3/13/21 merge: Krandor1: Fix for the two glumbra bugs reported by AegonVI
@@ -74,7 +70,7 @@ For example, 1.4.96
 `accept` = Accept quests.<br/>
 `turnin` = Turn in quests.<br/>
 `wayshrine` = Discover wayshrines.<br/>
-`step` = Declares a guide step (Auto-advance is based on nothing else but `goto` and `step`).<br/>
+`step` = Declares a guide step (Auto-advance based on `goto` and `step` or if the condition of another action like wayshrine or accept is met).<br/>
 
 
 #### These actions are purely visual and do not auto-advance to the next step
@@ -97,7 +93,7 @@ For example, 1.4.96
 
 `|tip` = Handler for displaying tips in a small font. Note: placing a `|tip` in a `goto` step prevents the action from automatically going to the next step when meeting the condition.
 
-`|next Aldmeri Dominion Leveling Guides\\Khenarthi's Roost` = Instructs ZGESO to skip to another guide
+`|next Aldmeri Dominion Leveling Guides\\Khenarthi's Roost` = Instructs ZGESO to go to another guide
 * `next` = Handler that tells the guide to load another guide
 * `Aldmeri Dominion Leveling Guides\\Khenarthi's Roost` = the RegisterGuide to load
 
@@ -165,7 +161,7 @@ step
 
 * `/dump ZGV.Data:GetQuestIdByName("A City in Black")` - Returns the Quest ID
 * `/dump ZGV.Quests:IsQuestComplete("A City in Black")` - Returns a boolean
-* `/dump ZGV.Quests:HasQuest("A City in Black")` - Return a boolean
+* `/dump ZGV.Quests:HasQuest("A City in Black")` - Returns a boolean
 * `/dump d(GetCurrentMapIndex())` - Returns the zone's ID. Tip: some functions require the `d()` command to display the output.
 
 
@@ -180,8 +176,8 @@ step
 
 ### Additional Resources
 
-* https://esodata.uesp.net/100034/functioncalls.txt
-* https://esodata.uesp.net/100034/
+* https://esodata.uesp.net/100035/functioncalls.txt
+* https://esodata.uesp.net/100035/
 * https://wiki.esoui.com/API
 * https://wiki.esoui.com/Texture_List
 * https://mothereff.in/lua-minifier
